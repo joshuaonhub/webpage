@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Register</title>
+</head>
+<body bgcolor=grey>
+<center><h1>Register</h1></center>
+<br><br><br>
+<center><h2>Full Name</h2></center>
+<center><input type="text" id="name" name="name" required><br><br><center>
+<center><h2>Email</h2></center><br>
+<center><input type="email" id="username" name="email" required><br><br></center>
+<center><h2>Password<h2></center>
+<input type="password" id="password" name="password" required><br><br>
+<button onclick="savedata()"type="submit">Submit</button><br>
+<script>
+function savedata()
+{
+let username = document.getElementById("username").value;
+let password = document.getElementById("password").value;
+localStorage.setItem("username", username);
+localStorage.setItem("password", password);
+alert(localStorage.getItem("username"));
+alert(localStorage.getItem("password"));
+}
+</script>
+<p>Already have an account? <a href="login'.html">Login here</a></p>
+</body>
+</html>

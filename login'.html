@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Login</title>
+</head>
+<body bgcolor=grey>
+<br>
+<center><i><h1>Login</h1></center></i></h1>
+<br><br><br><br>
+<center><h2>Username</center></h2>
+<center><input type="text" class='form-control'style='width:20%'id="username"  ></center>
+<br><br>
+<center><h2>Password</center></h2>
+<center><input type="password" class='form-control'style='width:20%'id="password"></center><br><br>
+<center><button onclick="button()" class="btn btn-warning"> Submit </button></center>
+<script>
+function button()
+{
+alert(localStorage.getItem("username"));
+alert(localStorage.getItem("password"));
+let username = document.getElementById("username").value;
+let password= document.getElementById("password").value;
+let uname = localStorage.getItem("username");
+let pass = localStorage.getItem("password");
+if(username == uname && password==pass)
+{alert("you are valid");
+window.location.href="dashboard.html";}
+else{alert("intruder");}
+}
+</script>
+<center><p>Don't have an account? <a href="reg%20(2).html">Register here</a></p><center>
+<p> <a href="after.html">enter to dashboard</a></p>
+</body>
+</html>
